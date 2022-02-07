@@ -28,19 +28,19 @@ public class LibraryController {
     public void health() {
     }
 
-    @DeleteMapping("/api/book/")
+    @DeleteMapping("/api/books/")
     public ResponseEntity<Object> deleteBooks() {
         library.clear();
         books.clear();
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/api/book/")
+    @GetMapping("/api/books/")
     public ResponseEntity<Object> getBooks() {
         return new ResponseEntity<>(library, HttpStatus.OK);
     }
 
-    @PostMapping("/api/book/")
+    @PostMapping("/api/books/")
     public <T> ResponseEntity<BookService> saveBook(@RequestBody Book book) {
         id++;
         book = this.bookService.saveBook(book, id);
