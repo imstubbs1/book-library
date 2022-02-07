@@ -4,7 +4,7 @@ class Book {
     private Integer id;
     private String author;
     private String title;
-    private String yearPublished;
+    private Integer yearPublished;
 
     public Integer getId() {
         return id;
@@ -30,11 +30,11 @@ class Book {
         this.title = title;
     }
 
-    public String getYearPublished() {
+    public Integer getYearPublished() {
         return yearPublished;
     }
 
-    public void setYearPublished(String yearPublished) {
+    public void setYearPublished(Integer yearPublished) {
         this.yearPublished = yearPublished;
     }
 }
